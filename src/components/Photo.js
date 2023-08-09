@@ -1,9 +1,11 @@
 import React from 'react'
-function Photo() {
+import { useSelector } from 'react-redux'
 
+function Photo() {
+    const mode = useSelector((state) => state)
     return (
         <div className="Photo">
-            <img src='https://placekitten.com/200/300' alt="author" />
+            <img style ={{"width" : "250px"}}src={mode.photo} alt="author" />
         </div>
     )
 }
